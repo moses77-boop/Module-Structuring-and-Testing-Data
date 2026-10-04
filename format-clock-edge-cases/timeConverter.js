@@ -5,7 +5,7 @@ function formatAs12HourClock(time){
   let period;
   if(hours < 12){
     period = "am";
-  } else {
+  }else{
     period = "pm";
   }
 

@@ -15,4 +15,3 @@ test(`Should return 11 when given an ace card`, () => {
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
-
