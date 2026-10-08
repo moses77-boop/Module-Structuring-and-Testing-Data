@@ -41,10 +41,10 @@ test("Arbitrary non-card string", () => {
 
 // TODO: What other invalid card cases can you think of?
 test("Missing suit", () => {
-  assert.equal(getCardValue("7"), /Expected a number followed by a suit/);
-  assert.equal(getCardValue("A"), /Expected a number followed by a result/);
+  assert.throws(() => getCardValue("7"), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue("A"), /Expected a number followed by a suit/);
 });
 
 test("Missing ranks", () => {
-  assert.equal(() => getCardValue("♥"), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue("♥"), /Expected a number followed by a suit/);
 })
