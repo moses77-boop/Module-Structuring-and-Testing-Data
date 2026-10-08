@@ -72,3 +72,14 @@ test("Lowercase ranks", () => {
 test("Suit before rank", () => {
   assert.throws(() => getCardValue("♣A"), /Expected a number followed by a suit/);
 });
+
+test("Extra characters or spaces", () => {
+  for (const ExS of [" A♦", "A♦ ", "A♦♦", "A ♦"]){
+    assert.throws(() => getCardValue(ExS), /Expected a number followed by a suit/);
+  }
+});
+
+test("Non-string input", () => {
+  assert.throws(() => getCardValue(undefined), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue(5), /Expected a number followed by a suit/);
+});
