@@ -47,4 +47,8 @@ test("Missing suit", () => {
 
 test("Missing ranks", () => {
   assert.throws(() => getCardValue("♥"), /Expected a number followed by a suit/);
+});
+
+test("Empty strings", () => {
+  assert.throws(() => getCardValue(""), /Expected a number followed by a suit/);
 })
