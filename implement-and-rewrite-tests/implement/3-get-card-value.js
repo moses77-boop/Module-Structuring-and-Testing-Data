@@ -52,4 +52,3 @@ export function getCardValue(card) {
   throw error;
 }
 
-// console.log(getCardValue("A♦"));
