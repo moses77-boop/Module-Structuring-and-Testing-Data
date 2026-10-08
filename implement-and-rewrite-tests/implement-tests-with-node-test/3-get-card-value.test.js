@@ -62,4 +62,9 @@ test("Out-of-range number ranks", () => {
 test("Unknown suit", () => {
   assert.throws(() => getCardValue("A❤"), /Expected a number followed by a suit/);
   assert.throws(() => getCardValue("AV"), /Expected a number followed by a suit/);
+});
+
+test("Lowercase ranks", () => {
+  assert.throws(() => getCardValue("a♦"), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue("k♥"), /Expected a number followed by a suit/);
 })
