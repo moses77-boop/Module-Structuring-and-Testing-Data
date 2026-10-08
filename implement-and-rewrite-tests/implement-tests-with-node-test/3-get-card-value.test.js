@@ -67,4 +67,8 @@ test("Unknown suit", () => {
 test("Lowercase ranks", () => {
   assert.throws(() => getCardValue("a♦"), /Expected a number followed by a suit/);
   assert.throws(() => getCardValue("k♥"), /Expected a number followed by a suit/);
-})
+});
+
+test("Suit before rank", () => {
+  assert.throws(() => getCardValue("♣A"), /Expected a number followed by a suit/);
+});
