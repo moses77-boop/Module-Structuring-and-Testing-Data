@@ -19,6 +19,11 @@ test("Face cards return 10", () => {
   assert.equal(getCardValue("K♥"), 10);
 })
 
+test("Number cards 2 to 10 return their numbers", () => {
+  for(let n = 2; n <= 10; n++){
+    assert.equal(getCardValue(`${n}♦`), n)
+  }
+})
 test("Arbitrary non-card string", () => {
   assert.throws(() => getCardValue("invalid"), /Expected a number followed by a suit, but got "invalid"/, "Expected clear error");
 });
