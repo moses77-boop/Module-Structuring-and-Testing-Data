@@ -24,10 +24,15 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  const validSuits = ["u2660", "\u2665", "\u2666", "\u2663"];
+  const validSuits = ["\u2660", "\u2665", "\u2666", "\u2663"];
   const numberRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
   const faceRanks = ["J", "Q", "K"];
 
   const error = new Error(`Expected a number followed by a suit, but got "${card}"`);
+
+  if(typeof card !== "string" || card.length < 2){
+    throw error;
+  }
+
 
 }
