@@ -34,5 +34,11 @@ export function getCardValue(card) {
     throw error;
   }
 
+  const suit = card.slice(-1);
+  const rank = card.slice(0, -1);
+
+  if(!validSuits.includes(suit)){
+    throw error;
+  }
 
 }
