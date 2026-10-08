@@ -44,3 +44,7 @@ test("Missing suit", () => {
   assert.equal(getCardValue("7"), /Expected a number followed by a suit/);
   assert.equal(getCardValue("A"), /Expected a number followed by a result/);
 });
+
+test("Missing ranks", () => {
+  assert.equal(() => getCardValue("♥"), /Expected a number followed by a suit/);
+})
