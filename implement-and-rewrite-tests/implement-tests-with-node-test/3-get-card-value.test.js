@@ -13,6 +13,12 @@ test("Ace returns 11", () => {
   assert.equal(getCardValue("A♠"), 11);
 });
 
+test("Face cards return 10", () => {
+  assert.equal(getCardValue("J♣"), 10);
+  assert.equal(getCardValue("Q♦"), 10);
+  assert.equal(getCardValue("K♥"), 10);
+})
+
 test("Arbitrary non-card string", () => {
   assert.throws(() => getCardValue("invalid"), /Expected a number followed by a suit, but got "invalid"/, "Expected clear error");
 });
