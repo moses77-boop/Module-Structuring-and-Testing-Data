@@ -43,6 +43,8 @@ export function getCardValue(card) {
   if(rank === "A") {
     return 11;
   }
-  
+  if(faceRanks.includes(rank)){
+    return 10;
+  }
 
 }
