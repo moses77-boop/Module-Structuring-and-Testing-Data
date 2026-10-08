@@ -24,6 +24,10 @@ test("Number cards 2 to 10 return their numbers", () => {
     assert.equal(getCardValue(`${n}♦`), n);
   }
 });
+
+test("Only valid double-digit '10' card", () => {
+  assert.equal(getCardValue("10♥"), 10);
+})
 test("Arbitrary non-card string", () => {
   assert.throws(() => getCardValue("invalid"), /Expected a number followed by a suit, but got "invalid"/, "Expected clear error");
 });
