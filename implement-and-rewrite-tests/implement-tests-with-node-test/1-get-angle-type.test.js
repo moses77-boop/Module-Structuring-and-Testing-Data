@@ -16,3 +16,9 @@ test("Classifies acute angles", () => {
   assert.equal(getAngleType(1), "Acute angle");
   assert.equal(getAngleType(89), "Acute angle");
 });
+
+test("Classifies obtuse angles", () => {
+  assert.equal(getAngleType(91), "Obtuse angle");
+  assert.equal(getAngleType(135), "Obtuse angle");
+  assert.equal(getAngleType(179), "Obtuse angle");
+})
