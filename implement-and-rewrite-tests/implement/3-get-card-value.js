@@ -28,4 +28,6 @@ export function getCardValue(card) {
   const numberRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
   const faceRanks = ["J", "Q", "K"];
 
+  const error = new Error(`Expected a number followed by a suit, but got "${card}"`);
+
 }
