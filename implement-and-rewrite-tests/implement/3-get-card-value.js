@@ -24,7 +24,7 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  const validSuits = ["\u2660", "\u2665", "\u2666", "\u2663"];
+  const validSuits = ["♠", "♥", "♦", "♣"];
   const numberRanks = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
   const faceRanks = ["J", "Q", "K"];
 
@@ -51,3 +51,5 @@ export function getCardValue(card) {
   }
   throw error;
 }
+
+console.log(getCardValue("A♦"))
