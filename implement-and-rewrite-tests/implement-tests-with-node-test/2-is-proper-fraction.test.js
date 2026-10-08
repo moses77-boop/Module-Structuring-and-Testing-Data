@@ -17,4 +17,5 @@ test("Basic proper fraction", () => {
 test("Basic improper fraction", () => {
   assert.equal(isProperFraction(5, 2), false);
   assert.equal(isProperFraction(3, 3), false);
+  assert.equal(isProperFraction(5, 0), false);
 })
