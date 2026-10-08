@@ -40,5 +40,9 @@ export function getCardValue(card) {
   if(!validSuits.includes(suit)){
     throw error;
   }
+  if(rank === "A") {
+    return 11;
+  }
+  
 
 }
