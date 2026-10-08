@@ -9,8 +9,77 @@ test("Valid single-digit card", () => {
   assert.equal(getCardValue("9♠"), 9);
 });
 
+test("Ace returns 11", () => {
+  assert.equal(getCardValue("A♠"), 11);
+});
+
+test("Face cards return 10", () => {
+  assert.equal(getCardValue("J♣"), 10);
+  assert.equal(getCardValue("Q♦"), 10);
+  assert.equal(getCardValue("K♥"), 10);
+})
+
+test("Number cards 2 to 10 return their numbers", () => {
+  for(let n = 2; n <= 10; n++) {
+    assert.equal(getCardValue(`${n}♦`), n);
+  }
+});
+
+test("Only valid double-digit '10' card", () => {
+  assert.equal(getCardValue("10♥"), 10);
+});
+
+test("Accepts all four suits", () => {
+  for (const suit of ["♠", "♥", "♦", "♣"]){
+  assert.equal(getCardValue(`5${suit}`), 5);
+  }
+});
+
 test("Arbitrary non-card string", () => {
   assert.throws(() => getCardValue("invalid"), /Expected a number followed by a suit, but got "invalid"/, "Expected clear error");
 });
 
 // TODO: What other invalid card cases can you think of?
+test("Missing suit", () => {
+  assert.throws(() => getCardValue("7"), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue("A"), /Expected a number followed by a suit/);
+});
+
+test("Missing ranks", () => {
+  assert.throws(() => getCardValue("♥"), /Expected a number followed by a suit/);
+});
+
+test("Empty strings", () => {
+  assert.throws(() => getCardValue(""), /Expected a number followed by a suit/);
+});
+
+test("Out-of-range number ranks", () => {
+  for (const OOR of ["0♥", "1♠", "11♦", "100♣"]) {
+    assert.throws(() => getCardValue(OOR), /Expected a number followed by a suit/);
+  }
+});
+
+test("Unknown suit", () => {
+  assert.throws(() => getCardValue("A❤"), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue("AV"), /Expected a number followed by a suit/);
+});
+
+test("Lowercase ranks", () => {
+  assert.throws(() => getCardValue("a♦"), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue("k♥"), /Expected a number followed by a suit/);
+});
+
+test("Suit before rank", () => {
+  assert.throws(() => getCardValue("♣A"), /Expected a number followed by a suit/);
+});
+
+test("Extra characters or spaces", () => {
+  for (const ExS of [" A♦", "A♦ ", "A♦♦", "A ♦"]){
+    assert.throws(() => getCardValue(ExS), /Expected a number followed by a suit/);
+  }
+});
+
+test("Non-string input", () => {
+  assert.throws(() => getCardValue(undefined), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue(5), /Expected a number followed by a suit/);
+});
