@@ -58,3 +58,8 @@ test("Out-of-range number ranks", () => {
     assert.throws(() => getCardValue(OOR), /Expected a number followed by a suit/);
   }
 });
+
+test("Unknown suit", () => {
+  assert.throws(() => getCardValue("A❤"), /Expected a number followed by a suit/);
+  assert.throws(() => getCardValue("AV"), /Expected a number followed by a suit/);
+})
