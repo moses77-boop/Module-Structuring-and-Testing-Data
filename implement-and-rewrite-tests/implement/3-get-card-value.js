@@ -24,5 +24,5 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  const validSuits = [u2660", "\u2665", "\u2666", "\u2663"];;
+  const validSuits = ["u2660", "\u2665", "\u2666", "\u2663"];
 }
