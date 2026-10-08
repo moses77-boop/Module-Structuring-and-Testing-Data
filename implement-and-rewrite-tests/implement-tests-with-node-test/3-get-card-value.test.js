@@ -51,4 +51,10 @@ test("Missing ranks", () => {
 
 test("Empty strings", () => {
   assert.throws(() => getCardValue(""), /Expected a number followed by a suit/);
-})
+});
+
+test("Out-of-range number ranks", () => {
+  for (const OOR of ["0♥", "1♠", "11♦", "100♣"]) {
+    assert.throws(() => getCardValue(OOR), /Expected a number followed by a suit/);
+  }
+});
