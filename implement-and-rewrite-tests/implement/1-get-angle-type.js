@@ -21,5 +21,8 @@ export function getAngleType(angle) {
     return "Acute angle";
   } else if(angle === 90) {
     return "RIght angle";
+  } else if(angle > 90 && angle < 180){
+    return "Obtuse angle";
   }
 }
+console.log(getAngleType(179))
