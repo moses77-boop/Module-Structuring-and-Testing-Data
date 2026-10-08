@@ -46,5 +46,8 @@ export function getCardValue(card) {
   if(faceRanks.includes(rank)){
     return 10;
   }
-
+  if(numberRanks.includes(rank)){
+    return Number(rank);
+  }
+  throw error;
 }
