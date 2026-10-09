@@ -36,7 +36,7 @@ test("should return empty string for count of 0", () => {
   const count = 0;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("");
-})
+});
 
 // Case: Handle negative count:
 // Given a target string `str` and a negative integer `count`,
@@ -44,4 +44,4 @@ test("should return empty string for count of 0", () => {
 // Then it should throw an error, as negative counts are not valid.
 test("should throw an error for negative count", () => {
   expect(() => repeatStr("hello", -1)).toThrow();
-})
+});
