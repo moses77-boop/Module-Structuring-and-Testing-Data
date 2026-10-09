@@ -55,4 +55,12 @@ test("should return an empty string when repeating an empty string", () => {
   const count = 5;
   const repeatedStr = repeatStr(str, count);
   expect(repeatedStr).toEqual("");
-}) 
+}); 
+
+// Case: Handling special strings: Empty string
+// Giving a target empty string `str` and a negative integer `count`,
+// When the repeatStr function is called with these inputs,
+// Then it should throw an error.
+test("should throw error for negative count even with an empty string", () => {
+  expect(() => repeatStr("", -1)).toThrow();
+});
