@@ -8,6 +8,9 @@ export function getOrdinalNumber(num) {
   if (getlastDigit === 1) {
     return `${num}st`;
   }
+  if (getlastDigit === 2) {
+    return `${num}nd`;
+  }
     return `${num}th`;
   
 }
