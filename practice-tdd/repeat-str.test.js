@@ -42,3 +42,6 @@ test("should return empty string for count of 0", () => {
 // Given a target string `str` and a negative integer `count`,
 // When the repeatStr function is called with these inputs,
 // Then it should throw an error, as negative counts are not valid.
+test("should throw an error for negative count", () => {
+  expect(() => repeatStr("hello", -1)).toThrow();
+})
