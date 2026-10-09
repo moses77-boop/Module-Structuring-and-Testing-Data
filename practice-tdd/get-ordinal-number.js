@@ -1,17 +1,17 @@
 export function getOrdinalNumber(num) {
-  const getlastDigit = num % 10;
-  const getlastTwoDigit = num % 100;
+  const lastDigit = num % 10;
+  const lastTwoDigit = num % 100;
 
-  if (getlastTwoDigit === 11 || getlastTwoDigit === 12 || getlastTwoDigit === 13) {
+  if (lastTwoDigit === 11 || lastTwoDigit === 12 || lastTwoDigit === 13) {
     return `${num}th`;
   }
-  if (getlastDigit === 1) {
+  if (lastDigit === 1) {
     return `${num}st`;
   }
-  if (getlastDigit === 2) {
+  if (lastDigit === 2) {
     return `${num}nd`;
   }
-  if (getlastDigit === 3) {
+  if (lastDigit === 3) {
     return `${num}rd`;
   }
     return `${num}th`;
