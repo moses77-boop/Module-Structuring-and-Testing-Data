@@ -11,6 +11,9 @@ export function getOrdinalNumber(num) {
   if (getlastDigit === 2) {
     return `${num}nd`;
   }
+  if (getlastDigit === 3) {
+    return `${num}rd`;
+  }
     return `${num}th`;
   
 }
