@@ -4,7 +4,7 @@
   "description": "In this section you'll practice this key skill of building up your program test first.",
   "main": "count.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",

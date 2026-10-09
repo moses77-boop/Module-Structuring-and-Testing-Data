@@ -1,3 +1,9 @@
 export function getOrdinalNumber(num) {
-  return "1st";
+  const getlastDigit = num % 10;
+
+  if (getlastDigit === 1) {
+    return `${num}st`;
+  }
+  return `${num}th`;
 }
+console.log(getOrdinalNumber(224))
