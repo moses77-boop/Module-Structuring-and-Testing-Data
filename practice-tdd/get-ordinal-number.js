@@ -2,7 +2,7 @@ export function getOrdinalNumber(num) {
   const getlastDigit = num % 10;
   const getlastTwoDigit = num % 100;
 
-  if (getlastTwoDigit === 11) {
+  if (getlastTwoDigit === 11 || getlastTwoDigit === 12 || getlastTwoDigit === 13) {
     return `${num}th`;
   }
   if (getlastDigit === 1) {
