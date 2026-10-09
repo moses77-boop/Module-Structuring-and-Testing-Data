@@ -14,4 +14,3 @@ export function getOrdinalNumber(num) {
     return `${num}th`;
   
 }
-console.log(getOrdinalNumber(121))
