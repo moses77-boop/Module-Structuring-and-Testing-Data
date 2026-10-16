@@ -29,3 +29,4 @@ console.log(find("code your future", "z"));
 // Without index++ there would be an infinite loop, whereby index would never change.
 
 // d) What is the condition index < str.length used for?
+// It is used to stop the loop as soon as it reaches the end of the string, so we don't look at positions that don't exist.
