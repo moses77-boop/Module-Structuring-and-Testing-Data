@@ -23,5 +23,7 @@ console.log(find("code your future", "z"));
 // "Index" starts at 0 and increases by 1 when there is no match.
 
 // b) What is the if statement used to check
+// It's checking whether the character at the current position equals the character we are looking for.
+
 // c) Why is index++ being used?
 // d) What is the condition index < str.length used for?
