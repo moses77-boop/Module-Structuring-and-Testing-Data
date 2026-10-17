@@ -27,9 +27,10 @@ test("password has at least 5 characters", () => {
     const result = isValidPassword(password);
     // Assert
     expect(result).toEqual(false);
-}
-);
+});
 
-// test("password has at least one uppercase letter", () => {
-//     const result = isValid
-// })
+test("password has at least one uppercase letter", () => {
+    const password = "ab7#x";
+    const result = isValidPassword(password);
+    expect(result).toEqual(false);
+})
