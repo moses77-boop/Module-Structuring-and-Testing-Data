@@ -34,4 +34,6 @@ function isValidCreditCardNumber(cardNumber){
     if(sum <= 16){
         return false;
     }
+
+    return true;
 }
