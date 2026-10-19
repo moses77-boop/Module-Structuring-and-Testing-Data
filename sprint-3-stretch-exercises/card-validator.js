@@ -2,12 +2,23 @@ function isValidCreditCardNumber(cardNumber){
     if(cardNumber.length !== 16) {
         return false;
     }
-    
+
     const allowedCharacters = "0123456789";
     for(let i = 0; i < cardNumber.length; i++) {
         const character = cardNumber[i];
-        if(!allowedCharacters.includes(character)){
+        if(!allowedCharacters.includes(character)) {
             return false;
         }
+    }
+
+    const firstDigit = cardNumber[0];
+    let foundDifferentDigit = false;
+    for(let i = 0; i < cardNumber.length; i++) {
+        if(cardNumber[i] !== firstDigit) {
+            foundDifferentDigit = true;
+        }
+    }
+    if(foundDifferentDigit === false){
+        return false;
     }
 }
