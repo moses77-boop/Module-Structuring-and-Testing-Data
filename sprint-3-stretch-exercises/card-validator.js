@@ -21,4 +21,9 @@ function isValidCreditCardNumber(cardNumber){
     if(foundDifferentDigit === false){
         return false;
     }
+
+    const lastDigit = Number(cardNumber[15]);
+    if(lastDigit % 2 !== 0) {
+        return false;
+    }
 }
