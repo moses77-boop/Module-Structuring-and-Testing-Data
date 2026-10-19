@@ -26,4 +26,12 @@ function isValidCreditCardNumber(cardNumber){
     if(lastDigit % 2 !== 0) {
         return false;
     }
+
+    let sum = 0;
+    for(let i = 0; i < cardNumber.length; i++){
+        sum += Number(cardNumber[i]);
+    }
+    if(sum <= 16){
+        return false;
+    }
 }
