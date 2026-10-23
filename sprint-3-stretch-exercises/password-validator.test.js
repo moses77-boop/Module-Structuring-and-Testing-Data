@@ -36,9 +36,9 @@ test("password has at least one uppercase letter", () => {
 });
 
 test("password has at least one lowercase letter", () => {
-    const password = "ab7#x";
+    const password = "AB7#X";
     const result = isValidPassword(password);
-    expect(result).toEqual(true);
+    expect(result).toEqual(false);
 });
 
 test("password has at least one number", () => {
