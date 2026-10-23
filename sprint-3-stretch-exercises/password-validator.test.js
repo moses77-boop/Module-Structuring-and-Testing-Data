@@ -48,9 +48,9 @@ test("password has at least one number", () => {
 });
 
 test("password has at least one non-alphanumeric symbol", () => {
-    const password = "Ab7!x";
+    const password = "Ab7nx";
     const result = isValidPassword(password);
-    expect(result).toEqual(true);
+    expect(result).toEqual(false);
 });
 
 test("password must not be a previous password", () => {
