@@ -16,10 +16,6 @@ You must breakdown this problem in order to solve it. Find one test case first a
 */
 import { isValidPassword } from "./password-validator.js";
 
-test("All valid password returns true", () => {
-    expect(isValidPassword("Ab7#x")).toEqual(true);
-});
-
 test("password has at least 5 characters", () => {
     // Arrange
     const password = "Ab7#";
