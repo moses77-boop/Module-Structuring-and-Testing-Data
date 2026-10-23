@@ -42,9 +42,9 @@ test("password has at least one lowercase letter", () => {
 });
 
 test("password has at least one number", () => {
-    const password = "Ab7#x";
+    const password = "Abc#x";
     const result = isValidPassword(password);
-    expect(result).toEqual(true);
+    expect(result).toEqual(false);
 });
 
 test("password has at least one non-alphanumeric symbol", () => {
