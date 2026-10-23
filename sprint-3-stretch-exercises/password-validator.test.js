@@ -22,7 +22,7 @@ test("All valid password returns true", () => {
 
 test("password has at least 5 characters", () => {
     // Arrange
-    const password = "Ab7xn";
+    const password = "Ab7#";
     // Act
     const result = isValidPassword(password);
     // Assert
@@ -32,7 +32,7 @@ test("password has at least 5 characters", () => {
 test("password has at least one uppercase letter", () => {
     const password = "Ab7#x";
     const result = isValidPassword(password);
-    expect(result).toEqual(true);
+    expect(result).toEqual(false);
 });
 
 test("password has at least one lowercase letter", () => {
